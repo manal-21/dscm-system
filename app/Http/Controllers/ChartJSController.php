@@ -28,8 +28,8 @@ class ChartJSController extends Controller
         $labels = $orders->keys();
         $data = $orders->values();
               
-        //return view('chart', compact('labels', 'data'));
-        return response()->json([
+        return view('chart', compact('labels', 'data'));
+        //return response()->json([
             $labels,
             $data
         ]);
